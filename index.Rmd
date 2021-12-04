@@ -3,7 +3,7 @@ title: ""
 output: html_document
 ---
 
-![](a.jpg)
+![](a.jpg){width=600px}
 
 Hoş geldiniz!
 
@@ -26,3 +26,4 @@ Ben Dr. Hüseyin Utku Demir. Karabük Üniversitesinde öğretim görevlisi olar
   - Ekonomik Krizler
 
 Bu web sitesi ders notlarını paylaşmak için kurulmuştur. Ders notlarına yukarıda bulunan sekmeden ulaşabilirsiniz.
+
