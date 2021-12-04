@@ -1,18 +1,20 @@
 ---
-title: "Dr. Hüseyin Utku Demir"
+title: ""
 output: html_document
 ---
 
-Web siteme hoş geldiniz!
+![](a.jpg)
 
-Karabük Üniversitesinde öğretim görevlisi olarak çalışıyorum. Doktaramı CUNY Graduate Center'da ekonomi bölümünde tamamladım. Ekonometri, Uluslararası Ekonomi, Makine Öğrenmesi ilgi alanlanlarım. Ayrıca CUNY bünyesinde Brooklyn Koleji, Hunter Koleji, City Kolejinde çeşitli yüksek lisans ve lisans dersleri verdim. 
+Hoş geldiniz!
 
-- Eğitim
-  - CUNY Graduate Center, Ekonomi Doktora
-  - Galatasaray Üniversitesi, Ekonomi Master
+Ben Dr. Hüseyin Utku Demir. Karabük Üniversitesinde öğretim görevlisi olarak çalışıyorum. Ekonometri, Uluslararası Ekonomi, Makine Öğrenmesi ilgi alanlanlarım. Ayrıca CUNY bünyesinde Brooklyn Koleji, Hunter Koleji, City Kolejinde çeşitli yüksek lisans ve lisans dersleri verdim. 
+
+- **Eğitim**
+  - CUNY Graduate Center, Ekonomi, Doktora
+  - Galatasaray Üniversitesi, Ekonomi, Master
   - University of New Haven, MBA
 
-- Verdiğim Derslerin Bazıları
+- **Verdiğim Derslerin Bazıları**
   - Uluslararası Finans
   - Makroekonomi
   - Mikroekonomi
