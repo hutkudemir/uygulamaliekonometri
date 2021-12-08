@@ -12,6 +12,55 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Ödev
+
+### Wooldridge Bölüm Soruları
+
+1. 4137 üniversite öğrencisi üzerinde GPA2'deki verileri kullanarak, en küçük kareler (OLS) tarafından aşağıdaki denklem tahmin edilmiştir:
+
+$$
+üniversite.not.ortalaması=1.392 - 0.0135 lmsyd + 0.00148sat
+$$
+
+lmsyd, öğrencilerin lise mezuniyet sınıflarındaki yüzdelik dilimi göstermektedir. Örneğin, lmsyd=5, sınıfın ilk %5'inde olduğu anlamına gelir. sat, öğrenci başarı testindeki birleştirilmiş matematik ve sözel puanlardır.
+
+a. lmsyd katsayısının negatif olması neden mantıklıdır?
+b. lmsyd = 20 ve sat = 1.050 olduğunda tahmini üniversite not ortalaması nedir?
+c. Diyelim ki iki lise mezunu, A ve B, liseden aynı yüzdelik dilimde mezun oldular.
+Ancak Öğrenci A'nın SAT puanı 140 puan daha yüksek. (aynı zamanda yaklaşık bir standart sapmaya sahip). Bu iki öğrenci için üniversite not ortalamasında tahmini fark nedir? Bu fark büyük bir fark mı?
+d. lmsyd sabit tutulduğunda, SAT puanlarındaki hangi fark, tahmini üniversite not ortalaması farkına 0,50 veya bir notun yarısı kadar farka yol açar? Cevabınıza yorum yapın.
+
+2. Aşağıdaki model, Biddle ve Hamermesh (1990) tarafından uyumak ve çalışmak için harcanan zaman arasındaki dengeyi incelemek ve uykuyu etkileyen diğer faktörleri incelemek için kullanılan çoklu regresyon modelinin basitleştirilmiş bir versiyonudur:
+
+$$
+uyku=\beta_0 + \beta_1 toplam.iş+ \beta_2 eğitim + \beta3 yaş + u
+$$
+
+uyku ve toplam iş dakikayla, eğitim ve yaş yılla hesaplanmıştır.
+
+a. Yetişkinler iş için uykuyu takas ediyorsa, $\beta_1$'in işareti nedir?
+b. $\beta_2$ ve $\beta_3$'ün hangi işaretleri olacağını düşünüyorsunuz?
+c. SLEEP75'teki verileri kullanarak, tahmin edilen denklem şu şekildedir:
+
+$$
+uyku=3,638.25 - 0.148 toplam.iş - 11.13 eğitim + 2.20 yaş
+$$
+$n=706$ ve $R^2=0.113$ 
+
+Birisi haftada beş saat daha fazla çalışırsa, uykunun kaç dakika düşeceği tahmin edilir?
+bu büyük bir takas mı?
+d.Eğitim üzerindeki tahmini katsayının üzerindeki işaretini ve büyüklüğünü tartışın.
+e.Uykudaki çeşitliliğin çoğunu toplam iş, eğitim ve yaşın açıkladığını söyleyebilir misiniz? Uyuyarak geçirilen süreyi başka hangi faktörler etkileyebilir? Bunların toplam iş ile ilişkili olması muhtemel mi?
+
+3. Üniversite not ortalamasını çeşitli etkinliklerde harcanan zamanla ilişkilendiren bir çalışma yapmak istiyorsunuz, birkaç öğrenciye bir anket dağıttınız. Öğrencilere her hafta dört aktivitede kaç saat geçirdikleri sordunuz: ders çalışmak, uyumak, bir işte çalışmak ve boş zaman. Herhangi bir aktivite dört kategoriden birine konur, böylece her öğrenci için dört aktivitedeki saatlerin toplamı 168 olmalıdır.
+
+$$
+not.ortalaması=\beta_0 + \beta_1 ders.çalışma+ \beta_2 uyumak + \beta3 iş.çalışma + \beta4 boş.zaman + u
+$$
+
+a. $\beta_1$'i yorumladığınızda çalışmayı değiştirirken uykuyu, işi ve boş zamanları sabit tutmak mantıklı mı?
+b. Bu modelin neden MLR.3 Varsayımını ihlal ettiğini açıklayın.
+c. Modeli, parametrelerinin faydalı bir yoruma sahip olması için nasıl yeniden formüle edebilirsiniz ve varsayım MLR.3'ü ihlal edilmez?
 
 ### Cevaplar
 
@@ -46,6 +95,55 @@ $$
 
 Bu durumda, $\beta_1$ ders çalışma bir saat arttığında, uyku, iş ve $u$ sabit tutulduğu zaman not ortalamasındaki değişiklik olarak yorumlanır. Uykuyu ve çalışmayı sabit tutuyoruz, ancak ders çalışmayı bir saat artırıyorsak, boş zamanı bir saat azaltıyor olmalıyız. Diğer eğim parametreleri de benzer bir yoruma sahiptir.
 
+### Wooldridge Veri Sorusu 
+
+1. Sağlık görevlilerinin ilgilendiği sorunlardan biri, hamilelik sırasında sigara içmenin bebek sağlığı üzerindeki etkilerini belirlemektir. Bebek sağlığının bir ölçüsü doğum ağırlığıdır; çok düşük doğum ağırlığı, bebeği çeşitli hastalıklara yakalanma riskine sokabilir. Doğum ağırlığını etkileyen sigara içimi dışındaki faktörlerin sigara ile ilişkili olması muhtemel olduğundan, bu faktörleri dikkate almalıyız. Örneğin, daha yüksek gelir genellikle daha iyi doğum öncesi bakıma erişimin yanı sıra anne için daha iyi beslenme ile sonuçlanır. Bunu tanımlayan bir denklem
+
+$$
+bwght=\beta_0 + \beta_1 cigs+ \beta_2 faminc + u
+$$
+
+Wooldridge BWGHT data setini kullanın.
+
+a. Modelin değişkenlerinin ne anlama geldiğini yazın.
+b. Modeli tahmin etmeden, $\beta_2$ için en olası işaret nedir?
+c. cigs ve faminc'in ilişkili olabileceğini düşünüyor musunuz? Korelasyonun pozitif mi negatif mi olabilir?
+d. Şimdi, BWGHT'deki verileri kullanarak, faminc olan ve olmayan denklemi tahmin edin. sonuçları rapor edin. örnek boyutu ve R-kare dahil olmak üzere denklem formunda yazın. Sonuçlarınızı tartışın, faminc eklemenin cigs'in bwght üzerindeki tahmini etkisini önemli ölçüde değiştirip değiştirmediğine odaklanın.
+
+2. Bu soruyu yanıtlamak için DISCRIM verilerini kullanın. Bunlar, New Jersey ve Pennsylvania'daki fast-food restoranlarındaki çeşitli ürünlerin fiyatlarına ilişkin posta kodu düzeyinde veriler ve posta kodu popülasyonunun özellikleridir. Buradaki fikir, fast-food restoranlarının siyahların daha yoğun olduğu bölgelerde daha yüksek fiyatlar talep edip etmediğini öğrenmektir. Modelimiz
+
+$$
+psoda=\beta_0 + \beta_1 prpblck+ \beta_2 income + u
+$$
+
+a. Modelin değişkenlerinin ve prppov değişkeninin ne anlama geldiğini yazın.
+b. ortalama prpblck ve income değerlerini standart sapmalarıyla birlikte bulun. prpblck ve income ölçü birimleri nelerdir?
+c. Bu modeli OLS ile tahmin edin ve sonuçları, n ve R-kare dahil olmak üzere denklem biçiminde rapor edin. (Tahminleri raporlarken bilimsel gösterimi kullanmayın.) prpblck üzerindeki katsayıyı yorumlayın. Sizce ekonomik olarak büyük mü?
+d. Basit regresyon
+$$
+psoda=\beta_0 + \beta_1 prpblck + u
+$$
+modelini kullanarak basit regresyonu tahmin edin. Ayrımcılık etkisi income'ı kontrol ettiğiniz modele göre daha mı büyük daha mı küçük?
+e. Gelire göre sabit fiyat esnekliğine sahip bir model daha uygun olabilir. 
+$$
+log(psoda)=\beta_0 + \beta_1 prpblck+ \beta_2 log(income) + u
+$$
+
+Modelin tahmin edin ve tahminlerini raporlayın.
+Eğer prpblck .20 (20 yüzde puanı) artarsa, psoda'nın tahmini yüzde değişimi ne olur? (İpucu: Cevap 2.xx'dir, burada “xx”i doldurursunuz)
+
+f. Şimdi prppov değişkenini kısım e'deki regresyona ekleyin. $\beta_1$'e ne olur?
+g. log(income) ve prppov arasındaki ilişkiyi bulun. Kabaca beklediğiniz gibi mi?
+h. Aşağıdaki ifadeyi değerlendirin: “log(income) ve prppov çok yüksek oranda ilişkili olduğundan, aynı regresyonda olmalarına gerek yoktur.”
+
+3. Tek ebeveynli hanelerin öğrencilerin matematik performansı üzerindeki etkilerini incelemek için MEAPSINGLE'daki verileri kullanın. Bu veriler, 2000 yılı için güneydoğu Michigan'daki okulların bir alt kümesi içindir. Sosyo-ekonomik değişkenler, Posta kodu düzeyinde elde edilir (burada Posta kodu okulların posta adreslerine göre atanır).
+
+a. math4, pctsgle, lmedinc ve free değişkenlerinin ne anlama geldiklerini yazın.
+b. Math4'ün basit regresyonunu pctsgle üzerinde çalıştırın ve sonuçları normal biçimde rapor edin. Eğim katsayısını yorumlayın. Tek ebeveynliğin etkisi büyük mü yoksa küçük mü görünüyor?
+c. lmedinc ve free değişkenlerini denkleme ekleyin. pctsgle üzerindeki katsayıya ne olur? 
+d. lmedinc ve free arasındaki örnek korelasyonu bulun. Beklediğiniz işaret var mı?
+e. Imedinc ve free arasındaki önemli korelasyon varsa. Tek ebeveynliğin öğrenci performansı üzerindeki nedensel etkisini daha iyi tahmin etmek için bir tanesini regresyondan analizinden çıkarmanız gerektiği anlamına gelir mi? Açıklayın.
+f. Görünen açıklayıcı değişkenlerin her biri için varyans enflasyon faktörlerini (VIF'ler) bulun. Hangi değişken en büyük VIF'ye sahiptir? Bu bilgi, tek ebeveynliğin matematik performansı üzerindeki nedensel etkisini incelemek için kullanacağınız modeli etkiler mi?
 
 ### Wooldridge Veri Soruları Cevapları
 
