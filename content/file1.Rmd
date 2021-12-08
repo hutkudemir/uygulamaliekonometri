@@ -534,4 +534,3 @@ c. lmedinc ve free değişkenlerini denkleme ekleyin. pctsgle üzerindeki katsay
 d. lmedinc ve free arasındaki örnek korelasyonu bulun. Beklediğiniz işaret var mı?
 e. Imedinc ve free arasındaki önemli korelasyon varsa. Tek ebeveynliğin öğrenci performansı üzerindeki nedensel etkisini daha iyi tahmin etmek için bir tanesini regresyondan analizinden çıkarmanız gerektiği anlamına gelir mi? Açıklayın.
 f. Görünen açıklayıcı değişkenlerin her biri için varyans enflasyon faktörlerini (VIF'ler) bulun. Hangi değişken en büyük VIF'ye sahiptir? Bu bilgi, tek ebeveynliğin matematik performansı üzerindeki nedensel etkisini incelemek için kullanacağınız modeli etkiler mi?
-
