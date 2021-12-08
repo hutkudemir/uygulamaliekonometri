@@ -76,7 +76,7 @@ $$
 
 c. A ve B arasındaki fark, sat katsayısının 140 katıdır, çünkü lmsyd her iki öğrenci için de aynıdır. Dolayısıyla A'nın $0.00148 \cdot (140)= 0.207$ daha yüksek bir puana sahip olduğu tahmin edilmektedir.
 
-d. lmsy sabit olduğunda, $\sum(\Delta universite.not.ortalaması) = 0.00148 \cdot \Delta sat$. Bu durumda  $0.5 = 0.00148 \cdot \Delta sat$ veya $\Delta sat= \frac{0.00148}{0.5} $ olacak şekilde bulmak istiyoruz. $\Delta sat= 338 $
+d. lmsy sabit olduğunda, $\Delta universite.not.ortalaması = 0.00148 \cdot \Delta sat$. Bu durumda  $0.5 = 0.00148 \cdot \Delta sat$ veya $\Delta sat= \frac{0.00148}{0.5} $ olacak şekilde bulmak istiyoruz. $\Delta sat= 338 $
 
 2. 
 a. Diğer herşey eşit olduğunda, yetişkinler uykuyu iş için tercih ediyorsa, daha fazla iş daha az uyku anlamına gelir, bu yüzden $\beta_1<0$ olur.
