@@ -153,6 +153,51 @@ a.sourceLine {
 
 
 <section class="main-content">
+<div id="ödev" class="section level2">
+<h2>Ödev</h2>
+<div id="wooldridge-bölüm-soruları" class="section level3">
+<h3>Wooldridge Bölüm Soruları</h3>
+<ol style="list-style-type: decimal">
+<li>4137 üniversite öğrencisi üzerinde GPA2’deki verileri kullanarak, en küçük kareler (OLS) tarafından aşağıdaki denklem tahmin edilmiştir:</li>
+</ol>
+<p><span class="math display">\[
+üniversite.not.ortalaması=1.392 - 0.0135 lmsyd + 0.00148sat
+\]</span></p>
+<p>lmsyd, öğrencilerin lise mezuniyet sınıflarındaki yüzdelik dilimi göstermektedir. Örneğin, lmsyd=5, sınıfın ilk %5’inde olduğu anlamına gelir. sat, öğrenci başarı testindeki birleştirilmiş matematik ve sözel puanlardır.</p>
+<ol style="list-style-type: lower-alpha">
+<li>lmsyd katsayısının negatif olması neden mantıklıdır?</li>
+<li>lmsyd = 20 ve sat = 1.050 olduğunda tahmini üniversite not ortalaması nedir?</li>
+<li>Diyelim ki iki lise mezunu, A ve B, liseden aynı yüzdelik dilimde mezun oldular. Ancak Öğrenci A’nın SAT puanı 140 puan daha yüksek. (aynı zamanda yaklaşık bir standart sapmaya sahip). Bu iki öğrenci için üniversite not ortalamasında tahmini fark nedir? Bu fark büyük bir fark mı?</li>
+<li>lmsyd sabit tutulduğunda, SAT puanlarındaki hangi fark, tahmini üniversite not ortalaması farkına 0,50 veya bir notun yarısı kadar farka yol açar? Cevabınıza yorum yapın.</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Aşağıdaki model, Biddle ve Hamermesh (1990) tarafından uyumak ve çalışmak için harcanan zaman arasındaki dengeyi incelemek ve uykuyu etkileyen diğer faktörleri incelemek için kullanılan çoklu regresyon modelinin basitleştirilmiş bir versiyonudur:</li>
+</ol>
+<p><span class="math display">\[
+uyku=\beta_0 + \beta_1 toplam.iş+ \beta_2 eğitim + \beta3 yaş + u
+\]</span></p>
+<p>uyku ve toplam iş dakikayla, eğitim ve yaş yılla hesaplanmıştır.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Yetişkinler iş için uykuyu takas ediyorsa, <span class="math inline">\(\beta_1\)</span>’in işareti nedir?</li>
+<li><span class="math inline">\(\beta_2\)</span> ve <span class="math inline">\(\beta_3\)</span>’ün hangi işaretleri olacağını düşünüyorsunuz?</li>
+<li>SLEEP75’teki verileri kullanarak, tahmin edilen denklem şu şekildedir:</li>
+</ol>
+<p><span class="math display">\[
+uyku=3,638.25 - 0.148 toplam.iş - 11.13 eğitim + 2.20 yaş
+\]</span> <span class="math inline">\(n=706\)</span> ve <span class="math inline">\(R^2=0.113\)</span></p>
+<p>Birisi haftada beş saat daha fazla çalışırsa, uykunun kaç dakika düşeceği tahmin edilir? bu büyük bir takas mı? d.Eğitim üzerindeki tahmini katsayının üzerindeki işaretini ve büyüklüğünü tartışın. e.Uykudaki çeşitliliğin çoğunu toplam iş, eğitim ve yaşın açıkladığını söyleyebilir misiniz? Uyuyarak geçirilen süreyi başka hangi faktörler etkileyebilir? Bunların toplam iş ile ilişkili olması muhtemel mi?</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Üniversite not ortalamasını çeşitli etkinliklerde harcanan zamanla ilişkilendiren bir çalışma yapmak istiyorsunuz, birkaç öğrenciye bir anket dağıttınız. Öğrencilere her hafta dört aktivitede kaç saat geçirdikleri sordunuz: ders çalışmak, uyumak, bir işte çalışmak ve boş zaman. Herhangi bir aktivite dört kategoriden birine konur, böylece her öğrenci için dört aktivitedeki saatlerin toplamı 168 olmalıdır.</li>
+</ol>
+<p><span class="math display">\[
+not.ortalaması=\beta_0 + \beta_1 ders.çalışma+ \beta_2 uyumak + \beta3 iş.çalışma + \beta4 boş.zaman + u
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\beta_1\)</span>’i yorumladığınızda çalışmayı değiştirirken uykuyu, işi ve boş zamanları sabit tutmak mantıklı mı?</li>
+<li>Bu modelin neden MLR.3 Varsayımını ihlal ettiğini açıklayın.</li>
+<li>Modeli, parametrelerinin faydalı bir yoruma sahip olması için nasıl yeniden formüle edebilirsiniz ve varsayım MLR.3’ü ihlal edilmez?</li>
+</ol>
+</div>
 <div id="cevaplar" class="section level3">
 <h3>Cevaplar</h3>
 <ol style="list-style-type: decimal">
@@ -192,6 +237,56 @@ a.sourceLine {
 not.ortalaması=\beta_0 + \beta_1 ders.çalışma+ \beta_2 uyumak + \beta3 iş.çalışma + u
 \]</span></p>
 <p>Bu durumda, <span class="math inline">\(\beta_1\)</span> ders çalışma bir saat arttığında, uyku, iş ve <span class="math inline">\(u\)</span> sabit tutulduğu zaman not ortalamasındaki değişiklik olarak yorumlanır. Uykuyu ve çalışmayı sabit tutuyoruz, ancak ders çalışmayı bir saat artırıyorsak, boş zamanı bir saat azaltıyor olmalıyız. Diğer eğim parametreleri de benzer bir yoruma sahiptir.</p>
+</div>
+<div id="wooldridge-veri-sorusu" class="section level3">
+<h3>Wooldridge Veri Sorusu</h3>
+<ol style="list-style-type: decimal">
+<li>Sağlık görevlilerinin ilgilendiği sorunlardan biri, hamilelik sırasında sigara içmenin bebek sağlığı üzerindeki etkilerini belirlemektir. Bebek sağlığının bir ölçüsü doğum ağırlığıdır; çok düşük doğum ağırlığı, bebeği çeşitli hastalıklara yakalanma riskine sokabilir. Doğum ağırlığını etkileyen sigara içimi dışındaki faktörlerin sigara ile ilişkili olması muhtemel olduğundan, bu faktörleri dikkate almalıyız. Örneğin, daha yüksek gelir genellikle daha iyi doğum öncesi bakıma erişimin yanı sıra anne için daha iyi beslenme ile sonuçlanır. Bunu tanımlayan bir denklem</li>
+</ol>
+<p><span class="math display">\[
+bwght=\beta_0 + \beta_1 cigs+ \beta_2 faminc + u
+\]</span></p>
+<p>Wooldridge BWGHT data setini kullanın.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Modelin değişkenlerinin ne anlama geldiğini yazın.</li>
+<li>Modeli tahmin etmeden, <span class="math inline">\(\beta_2\)</span> için en olası işaret nedir?</li>
+<li>cigs ve faminc’in ilişkili olabileceğini düşünüyor musunuz? Korelasyonun pozitif mi negatif mi olabilir?</li>
+<li>Şimdi, BWGHT’deki verileri kullanarak, faminc olan ve olmayan denklemi tahmin edin. sonuçları rapor edin. örnek boyutu ve R-kare dahil olmak üzere denklem formunda yazın. Sonuçlarınızı tartışın, faminc eklemenin cigs’in bwght üzerindeki tahmini etkisini önemli ölçüde değiştirip değiştirmediğine odaklanın.</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Bu soruyu yanıtlamak için DISCRIM verilerini kullanın. Bunlar, New Jersey ve Pennsylvania’daki fast-food restoranlarındaki çeşitli ürünlerin fiyatlarına ilişkin posta kodu düzeyinde veriler ve posta kodu popülasyonunun özellikleridir. Buradaki fikir, fast-food restoranlarının siyahların daha yoğun olduğu bölgelerde daha yüksek fiyatlar talep edip etmediğini öğrenmektir. Modelimiz</li>
+</ol>
+<p><span class="math display">\[
+psoda=\beta_0 + \beta_1 prpblck+ \beta_2 income + u
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Modelin değişkenlerinin ve prppov değişkeninin ne anlama geldiğini yazın.</li>
+<li>ortalama prpblck ve income değerlerini standart sapmalarıyla birlikte bulun. prpblck ve income ölçü birimleri nelerdir?</li>
+<li>Bu modeli OLS ile tahmin edin ve sonuçları, n ve R-kare dahil olmak üzere denklem biçiminde rapor edin. (Tahminleri raporlarken bilimsel gösterimi kullanmayın.) prpblck üzerindeki katsayıyı yorumlayın. Sizce ekonomik olarak büyük mü?</li>
+<li>Basit regresyon <span class="math display">\[
+psoda=\beta_0 + \beta_1 prpblck + u
+\]</span> modelini kullanarak basit regresyonu tahmin edin. Ayrımcılık etkisi income’ı kontrol ettiğiniz modele göre daha mı büyük daha mı küçük?</li>
+<li>Gelire göre sabit fiyat esnekliğine sahip bir model daha uygun olabilir. <span class="math display">\[
+log(psoda)=\beta_0 + \beta_1 prpblck+ \beta_2 log(income) + u
+\]</span></li>
+</ol>
+<p>Modelin tahmin edin ve tahminlerini raporlayın. Eğer prpblck .20 (20 yüzde puanı) artarsa, psoda’nın tahmini yüzde değişimi ne olur? (İpucu: Cevap 2.xx’dir, burada “xx”i doldurursunuz)</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Şimdi prppov değişkenini kısım e’deki regresyona ekleyin. <span class="math inline">\(\beta_1\)</span>’e ne olur?</li>
+<li>log(income) ve prppov arasındaki ilişkiyi bulun. Kabaca beklediğiniz gibi mi?</li>
+<li>Aşağıdaki ifadeyi değerlendirin: “log(income) ve prppov çok yüksek oranda ilişkili olduğundan, aynı regresyonda olmalarına gerek yoktur.”</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>Tek ebeveynli hanelerin öğrencilerin matematik performansı üzerindeki etkilerini incelemek için MEAPSINGLE’daki verileri kullanın. Bu veriler, 2000 yılı için güneydoğu Michigan’daki okulların bir alt kümesi içindir. Sosyo-ekonomik değişkenler, Posta kodu düzeyinde elde edilir (burada Posta kodu okulların posta adreslerine göre atanır).</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>math4, pctsgle, lmedinc ve free değişkenlerinin ne anlama geldiklerini yazın.</li>
+<li>Math4’ün basit regresyonunu pctsgle üzerinde çalıştırın ve sonuçları normal biçimde rapor edin. Eğim katsayısını yorumlayın. Tek ebeveynliğin etkisi büyük mü yoksa küçük mü görünüyor?</li>
+<li>lmedinc ve free değişkenlerini denkleme ekleyin. pctsgle üzerindeki katsayıya ne olur?</li>
+<li>lmedinc ve free arasındaki örnek korelasyonu bulun. Beklediğiniz işaret var mı?</li>
+<li>Imedinc ve free arasındaki önemli korelasyon varsa. Tek ebeveynliğin öğrenci performansı üzerindeki nedensel etkisini daha iyi tahmin etmek için bir tanesini regresyondan analizinden çıkarmanız gerektiği anlamına gelir mi? Açıklayın.</li>
+<li>Görünen açıklayıcı değişkenlerin her biri için varyans enflasyon faktörlerini (VIF’ler) bulun. Hangi değişken en büyük VIF’ye sahiptir? Bu bilgi, tek ebeveynliğin matematik performansı üzerindeki nedensel etkisini incelemek için kullanacağınız modeli etkiler mi?</li>
+</ol>
 </div>
 <div id="wooldridge-veri-soruları-cevapları" class="section level3">
 <h3>Wooldridge Veri Soruları Cevapları</h3>
@@ -538,6 +633,7 @@ psoda=0.956 + 0.115 prpblck+ 0.0000016 income + u
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(coklureg3)</span></code></pre></div>
 <pre><code>##  pctsgle  lmedinc     free 
 ## 5.740981 4.118812 3.188079</code></pre>
+</div>
 </div>
 </section>
 
