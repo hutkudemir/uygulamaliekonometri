@@ -16,5 +16,6 @@ https://www.youtube.com/watch?v=afcHdHROqG0
 Aşağıdaki linklerden ders notlarına ulaşabilirsiniz
 
 * [3. Bölüm](content/file1.html)
+* [3. Bölüm Ödev Cevapları](content/file3.html)
 * [4. Bölüm](content/file2.html)
 
