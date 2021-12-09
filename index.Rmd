@@ -3,8 +3,6 @@ title: ""
 output: html_document
 ---
 
-![](a.jpg){width=600px}
-
 Hoş geldiniz!
 
 Ben Dr. Hüseyin Utku Demir. Karabük Üniversitesinde öğretim görevlisi olarak çalışıyorum. Ekonometri, Uluslararası Ekonomi, Makine Öğrenmesi ilgi alanlanlarım. Ayrıca CUNY bünyesinde Brooklyn Koleji, Hunter Koleji, City Kolejinde çeşitli yüksek lisans ve lisans dersleri verdim. 

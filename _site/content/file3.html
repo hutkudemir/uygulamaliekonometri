@@ -212,7 +212,7 @@ not.ortalaması=\beta_0 + \beta_1 ders.çalışma+ \beta_2 uyumak + \beta3 iş.�
 \]</span></p>
 <ol start="3" style="list-style-type: lower-alpha">
 <li><p>A ve B arasındaki fark, sat katsayısının 140 katıdır, çünkü lmsyd her iki öğrenci için de aynıdır. Dolayısıyla A’nın <span class="math inline">\(0.00148 \cdot (140)= 0.207\)</span> daha yüksek bir puana sahip olduğu tahmin edilmektedir.</p></li>
-<li><p>lmsy sabit olduğunda, <span class="math inline">\(\sum(\Delta universite.not.ortalaması) = 0.00148 \cdot \Delta sat\)</span>. Bu durumda <span class="math inline">\(0.5 = 0.00148 \cdot \Delta sat\)</span> veya $sat=  $ olacak şekilde bulmak istiyoruz. $sat= 338 $</p></li>
+<li><p>lmsy sabit olduğunda, <span class="math inline">\(\Delta universite.not.ortalaması = 0.00148 \cdot \Delta sat\)</span>. Bu durumda <span class="math inline">\(0.5 = 0.00148 \cdot \Delta sat\)</span> veya <span class="math inline">\(\Delta sat= \frac{0.00148}{0.5}\)</span> olacak şekilde bulmak istiyoruz. <span class="math inline">\(\Delta sat= 338\)</span></p></li>
 </ol>
 <ol start="2" style="list-style-type: decimal">
 <li></li>
@@ -307,7 +307,7 @@ log(psoda)=\beta_0 + \beta_1 prpblck+ \beta_2 log(income) + u
 </div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(bwght)</span></code></pre></div>
 <p>kullanacağımız değişkenlerin tanımları</p>
-<p>faminc: 1988 family income, $1000s, 1988 aile geliri cigs: cigs smked per day while preg, hamileyken içilen günlük sigara sayısı bwght: birth weight, ounces, doğum ağırlığı, ons</p>
+<p>-faminc: 1988 family income, $1000s, 1988 aile geliri -cigs: cigs smked per day while preg, hamileyken içilen günlük sigara sayısı -bwght: birth weight, ounces, doğum ağırlığı, ons</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Bir yandan, gelirdeki bir artış genellikle gıda tüketimini arttırır ve sigara ile aile geliri arasında pozitif bir ilişki olabilir. Öte yandan, daha fazla eğitime sahip ailelerin aile gelirleri de daha yüksektir ve daha fazla eğitim ile sigara içme arasında olumsuz bir ilişki vardır.</li>
 <li>Sigara ve faminc arasındaki örnek korelasyonu yaklaşık -0.173’tür ve negatif bir korelasyona işaret eder.</li>
@@ -369,7 +369,7 @@ bwght=119.772-0.514 cigs
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(discrim)</span></code></pre></div>
 <p>Gördüğünüz gibi veri setinde bazı değişkenler için bazı gözlemler NA değerine sahip. NA (not available) o gözlem için mevcut değil anlamına geliyor. Örneğin pfries (price of small fries, küçük kızartmanın fiyatı) değişkeninin beşinci gözlemi veri setinde bulunan beşinci restoranının küçük kızartma fiyatını bilmediğimiz anlamı taşıyor. Mevcut olmayan gözlemler analizlerde her zaman sorunlar çıkarır. Bu mevcut olmayan değişkenlerle nasıl başa çıkacağımızı yavaş yavaş öğrenmemiz gerekir.</p>
 <p>Modelin değişkenlerinin ve prppov değişkeninin anlamı.</p>
-<p>psoda: price of medium soda, 1st wave, orta sodanın fiyatı. prpblck: proportion black, zipcode, restoranın bulunduğu bölgede siyahi oranı income: median family income, zipcode, restoranın bulunduğu bölgenin medyan (ortanca) aile geliri. prppov: proportion in poverty, zipcode, restoranın bulunduğu bölgede yoksulluk oranı</p>
+<p>-psoda: price of medium soda, 1st wave, orta sodanın fiyatı. -prpblck: proportion black, zipcode, restoranın bulunduğu bölgede siyahi oranı -income: median family income, zipcode, restoranın bulunduğu bölgenin medyan (ortanca) aile geliri. -prppov: proportion in poverty, zipcode, restoranın bulunduğu bölgede yoksulluk oranı</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li></li>
 </ol>
@@ -381,7 +381,7 @@ bwght=119.772-0.514 cigs
 <pre><code>## [1] NA</code></pre>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(discrim<span class="sc">$</span>income)</span></code></pre></div>
 <pre><code>## [1] NA</code></pre>
-<p>Bildiğimiz mean ve sd fonksiyonlarını kullanarak ortama ve standart sapma değerlerini bulamadık. Çıkan NA sonucu bize bu değişkenlerin içinde bazı gözlemlerin mevcut olmadığını gösteriyor olabilir. discrim veri setinde 410 gözlem olduğundan her bir gözlemi kontrol edemiyorz ve bu değişkenlerin içinde kaç tane gözlemin mevcut olmadığını çıkaramıyoruz. R bize bu konuda is.na fonksiyonu ile yardımcı oluyor. is.na aslında sorduğumuz ingilizce bir soru ve is na? derken R’a mevcut olmayan gözlem var mı diye soru soruyoruz. R’da bize her bir gözlem için o gözlemin değeri olup olmadığını TRUE (doğru) ve FALSE (yanlış) olarak geri veriyor. Örnek vermek gerekirse konsola is.na(discrim<span class="math inline">\(income) yazarsanız, R income değişkeninin her bir gözlemi için TRUE ve FALSE değerlerini yükler. TRUE o gözlemin mecut olmadığını, FALSE gözlemin olduğunu söylemektedir. Ancak tekrar aynı sorunla karşı karşıya kalırız. 410 gözlem için TRUE ve FALSE değerlerini okumamız ve FALSE olanları toplamamız kaç gözlemin var olmadığını bulmamıza yol açacaktır. sum(is.na(discrim\)</span>income)) income değişkenin içindeki var olmayan gözlem sayısını toplayacak ve bize verecektir.</p>
+<p>Bildiğimiz mean ve sd fonksiyonlarını kullanarak ortama ve standart sapma değerlerini bulamadık. Çıkan NA sonucu bize bu değişkenlerin içinde bazı gözlemlerin mevcut olmadığını gösteriyor olabilir. discrim veri setinde 410 gözlem olduğundan her bir gözlemi kontrol edemiyorz ve bu değişkenlerin içinde kaç tane gözlemin mevcut olmadığını çıkaramıyoruz. R bize bu konuda is.na fonksiyonu ile yardımcı oluyor. is.na aslında sorduğumuz ingilizce bir soru ve is na? derken R’a mevcut olmayan gözlem var mı diye soru soruyoruz. R’da bize her bir gözlem için o gözlemin değeri olup olmadığını TRUE (doğru) ve FALSE (yanlış) olarak geri veriyor. Örnek vermek gerekirse konsola is.na(discrim$income) yazarsanız, R income değişkeninin her bir gözlemi için TRUE ve FALSE değerlerini yükler. TRUE o gözlemin mecut olmadığını, FALSE gözlemin olduğunu söylemektedir. Ancak tekrar aynı sorunla karşı karşıya kalırız. 410 gözlem için TRUE ve FALSE değerlerini okumamız ve FALSE olanları toplamamız kaç gözlemin var olmadığını bulmamıza yol açacaktır. sum(is.na(discrim$income)) income değişkenin içindeki var olmayan gözlem sayısını toplayacak ve bize verecektir.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(discrim<span class="sc">$</span>prpblck))</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(discrim<span class="sc">$</span>income))</span></code></pre></div>
@@ -571,7 +571,7 @@ psoda=0.956 + 0.115 prpblck+ 0.0000016 income + u
 </div>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(meapsingle)</span></code></pre></div>
 <p>math4, pctsgle, lmedinc ve free değişkenlerinin ne anlama geldikleri</p>
-<p>math4: percent satisfactory, 4th grade math, matematik başarı yüzdesi pctsgle: percent of children not in married-couple families, evli-çift ailelerde olmayan çocukların yüzdesi lmedinc: log(medinc), medinc: zipcode median family, $ (1999), bölgenin ortanca geliri free: percent eligible, free lunch, bedava öğle yemeğine uygun görülen yüzdesi</p>
+<p>-math4: percent satisfactory, 4th grade math, matematik başarı yüzdesi -pctsgle: percent of children not in married-couple families, evli-çift ailelerde olmayan çocukların yüzdesi -lmedinc: log(medinc), medinc: zipcode median family, $ (1999), bölgenin ortanca geliri -free: percent eligible, free lunch, bedava öğle yemeğine uygun görülen yüzdesi</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li></li>
 </ol>

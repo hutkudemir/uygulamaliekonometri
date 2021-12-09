@@ -5,13 +5,10 @@ output:
     df_print: paged
 ---
 
-Bu ödev notlarında R-Studio kullanılmıştır. R ve R-studio'yu bilgisayarınıza ücretsiz kurmak için bu video'yu izleyebilirsiniz.
+[Bu ödev notlarında R-Studio kullanılmıştır. R ve R-studio'yu bilgisayarınıza ücretsiz kurmak için bu video'yu izleyebilirsiniz.](https://www.youtube.com/watch?v=j252S7XZjI0)
 
-https://www.youtube.com/watch?v=j252S7XZjI0
 
-Ders notu boyunca, r üzerinden birçok işlem yapılacaktır ve bir çok paket kullanılmıştır. Örnekleri tekrarlamak istiyorsanız, library() komutunun içinde yazılı bulunan paketleri, sırası geldiğinde R-studio'ya indirmeniz gerekli.Paketleri nasıl indireceğinizi, R'a yeni başlayanlar için alıştırmaların bulunduğu, ve açıklamalar kısmında bu dersin ilk iki konusuyla ilgili uygulamalara ulaşabileceğiniz şu video'yu izleyebilirsiniz.
-
-https://www.youtube.com/watch?v=afcHdHROqG0
+Ders notu boyunca, r üzerinden birçok işlem yapılacaktır ve bir çok paket kullanılmıştır. Örnekleri tekrarlamak istiyorsanız, library() komutunun içinde yazılı bulunan paketleri, sırası geldiğinde R-studio'ya indirmeniz gerekli.[Paketleri nasıl indireceğinizi, R'a yeni başlayanlar için alıştırmaların bulunduğu, ve açıklamalar kısmında bu dersin ilk iki konusuyla ilgili uygulamalara ulaşabileceğiniz şu video'yu izleyebilirsiniz.](https://www.youtube.com/watch?v=afcHdHROqG0)
 
 Aşağıdaki linklerden ders notlarına ulaşabilirsiniz
 

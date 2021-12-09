@@ -76,7 +76,7 @@ $$
 
 c. A ve B arasındaki fark, sat katsayısının 140 katıdır, çünkü lmsyd her iki öğrenci için de aynıdır. Dolayısıyla A'nın $0.00148 \cdot (140)= 0.207$ daha yüksek bir puana sahip olduğu tahmin edilmektedir.
 
-d. lmsy sabit olduğunda, $\sum(\Delta universite.not.ortalaması) = 0.00148 \cdot \Delta sat$. Bu durumda  $0.5 = 0.00148 \cdot \Delta sat$ veya $\Delta sat= \frac{0.00148}{0.5} $ olacak şekilde bulmak istiyoruz. $\Delta sat= 338 $
+d. lmsy sabit olduğunda, $\Delta universite.not.ortalaması = 0.00148 \cdot \Delta sat$. Bu durumda  $0.5 = 0.00148 \cdot \Delta sat$ veya $\Delta sat= \frac{0.00148}{0.5}$ olacak şekilde bulmak istiyoruz. $\Delta sat= 338$
 
 2. 
 a. Diğer herşey eşit olduğunda, yetişkinler uykuyu iş için tercih ediyorsa, daha fazla iş daha az uyku anlamına gelir, bu yüzden $\beta_1<0$ olur.
@@ -159,9 +159,9 @@ help(bwght)
 
 kullanacağımız değişkenlerin tanımları
 
-faminc: 1988 family income, $1000s, 1988 aile geliri
-cigs: cigs smked per day while preg, hamileyken içilen günlük sigara sayısı
-bwght: birth weight, ounces, doğum ağırlığı, ons
+-faminc: 1988 family income, $1000s, 1988 aile geliri
+-cigs: cigs smked per day while preg, hamileyken içilen günlük sigara sayısı
+-bwght: birth weight, ounces, doğum ağırlığı, ons
 
 b. Bir yandan, gelirdeki bir artış genellikle gıda tüketimini arttırır ve sigara ile aile geliri arasında pozitif bir ilişki olabilir. Öte yandan, daha fazla eğitime sahip ailelerin aile gelirleri de daha yüksektir ve daha fazla eğitim ile sigara içme arasında olumsuz bir ilişki vardır. 
 c. Sigara ve faminc arasındaki örnek korelasyonu yaklaşık -0.173'tür ve negatif bir korelasyona işaret eder.
@@ -197,10 +197,10 @@ Gördüğünüz gibi veri setinde bazı değişkenler için bazı gözlemler NA 
 
 Modelin değişkenlerinin ve prppov değişkeninin anlamı.
 
-psoda: price of medium soda, 1st wave, orta sodanın fiyatı.
-prpblck: proportion black, zipcode, restoranın bulunduğu bölgede siyahi oranı
-income: median family income, zipcode, restoranın bulunduğu bölgenin medyan (ortanca) aile geliri.
-prppov: proportion in poverty, zipcode, restoranın bulunduğu bölgede yoksulluk oranı
+-psoda: price of medium soda, 1st wave, orta sodanın fiyatı.
+-prpblck: proportion black, zipcode, restoranın bulunduğu bölgede siyahi oranı
+-income: median family income, zipcode, restoranın bulunduğu bölgenin medyan (ortanca) aile geliri.
+-prppov: proportion in poverty, zipcode, restoranın bulunduğu bölgede yoksulluk oranı
 
 b. 
 
@@ -211,7 +211,7 @@ mean(discrim$income)
 sd(discrim$income)
 ```
 
-Bildiğimiz mean ve sd fonksiyonlarını kullanarak ortama ve standart sapma değerlerini bulamadık. Çıkan NA sonucu bize bu değişkenlerin içinde bazı gözlemlerin mevcut olmadığını gösteriyor olabilir. discrim veri setinde 410 gözlem olduğundan her bir gözlemi kontrol edemiyorz ve bu değişkenlerin içinde kaç tane gözlemin mevcut olmadığını çıkaramıyoruz. R bize bu konuda is.na fonksiyonu ile yardımcı oluyor. is.na aslında sorduğumuz ingilizce bir soru ve is na? derken R'a mevcut olmayan gözlem var mı diye soru soruyoruz. R'da bize her bir gözlem için o gözlemin değeri olup olmadığını TRUE (doğru) ve FALSE (yanlış) olarak geri veriyor. Örnek vermek gerekirse konsola is.na(discrim$income) yazarsanız, R income değişkeninin her bir gözlemi için TRUE ve FALSE değerlerini yükler. TRUE o gözlemin mecut olmadığını, FALSE gözlemin olduğunu söylemektedir. Ancak tekrar aynı sorunla karşı karşıya kalırız. 410 gözlem için TRUE ve FALSE değerlerini okumamız ve FALSE olanları toplamamız kaç gözlemin var olmadığını bulmamıza yol açacaktır. sum(is.na(discrim$income)) income değişkenin içindeki var olmayan gözlem sayısını toplayacak ve bize verecektir.
+Bildiğimiz mean ve sd fonksiyonlarını kullanarak ortama ve standart sapma değerlerini bulamadık. Çıkan NA sonucu bize bu değişkenlerin içinde bazı gözlemlerin mevcut olmadığını gösteriyor olabilir. discrim veri setinde 410 gözlem olduğundan her bir gözlemi kontrol edemiyorz ve bu değişkenlerin içinde kaç tane gözlemin mevcut olmadığını çıkaramıyoruz. R bize bu konuda is.na fonksiyonu ile yardımcı oluyor. is.na aslında sorduğumuz ingilizce bir soru ve is na? derken R'a mevcut olmayan gözlem var mı diye soru soruyoruz. R'da bize her bir gözlem için o gözlemin değeri olup olmadığını TRUE (doğru) ve FALSE (yanlış) olarak geri veriyor. Örnek vermek gerekirse konsola is.na(discrim\$income) yazarsanız, R income değişkeninin her bir gözlemi için TRUE ve FALSE değerlerini yükler. TRUE o gözlemin mecut olmadığını, FALSE gözlemin olduğunu söylemektedir. Ancak tekrar aynı sorunla karşı karşıya kalırız. 410 gözlem için TRUE ve FALSE değerlerini okumamız ve FALSE olanları toplamamız kaç gözlemin var olmadığını bulmamıza yol açacaktır. sum(is.na(discrim\$income)) income değişkenin içindeki var olmayan gözlem sayısını toplayacak ve bize verecektir.
 
 ```{r}
 sum(is.na(discrim$prpblck))
@@ -236,6 +236,7 @@ Diyelim ki siz bütün değişkenler için kaç tane gözlemin mevcut olmadığ�
 library(vtable)
 sumtable(discrim, summ=c('notNA(x)', 'countNA(x)', 'mean(x)','sd(x)'),out='return')
 ```
+
 c. 
 
 ```{r}
@@ -247,7 +248,7 @@ $$
 psoda=0.956 + 0.115 prpblck+ 0.0000016 income + u
 $$
 
-Örnek boyutu 399 gözlemdir (398 serbestlik derecesi ve 9 eksik gözlem ile gösterilir) ve ayarlanmış $R^2$ 0.595'tir. prpblck katsayısı, her şey eşit olduğunda, prpblck %10 artarsa, soda fiyatının ekonomik olarak önemli olmayan derecede yaklaşık 1,2 sent artacağını gösterir.
+Örnek boyutu 399 gözlemdir (398 serbestlik derecesi ve 9 eksik gözlem ile gösterilir) ve ayarlanmış $R^2$ 0.595'tir. prpblck katsayısı, her şey eşit olduğunda, prpblck \%10 artarsa, soda fiyatının ekonomik olarak önemli olmayan derecede yaklaşık 1,2 sent artacağını gösterir.
 
 d. 
 
@@ -299,10 +300,10 @@ help(meapsingle)
 ```
 math4, pctsgle, lmedinc ve free değişkenlerinin ne anlama geldikleri
 
-math4: percent satisfactory, 4th grade math, matematik başarı yüzdesi
-pctsgle: percent of children not in married-couple families, evli-çift ailelerde olmayan çocukların yüzdesi
-lmedinc: log(medinc), medinc: zipcode median family, \$ (1999), bölgenin ortanca geliri
-free: percent eligible, free lunch, bedava öğle yemeğine uygun görülen yüzdesi
+-math4: percent satisfactory, 4th grade math, matematik başarı yüzdesi
+-pctsgle: percent of children not in married-couple families, evli-çift ailelerde olmayan çocukların yüzdesi
+-lmedinc: log(medinc), medinc: zipcode median family, \$ (1999), bölgenin ortanca geliri
+-free: percent eligible, free lunch, bedava öğle yemeğine uygun görülen yüzdesi
 
 b.
 
